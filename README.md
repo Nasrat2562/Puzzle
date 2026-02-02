@@ -21,8 +21,3 @@ Write a single-file program in one language that:
 3. No file system access allowed (can't read own source code)
 4. All code must be contained within a single file
 
-console.log(pythonCode);`;
-
-const pythonCode = `print("""${jsCode.replace(/\\\\/g, '\\\\\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n')}""")`;
-
-console.log(pythonCode);
