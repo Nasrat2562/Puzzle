@@ -21,17 +21,6 @@ Write a single-file program in one language that:
 3. No file system access allowed (can't read own source code)
 4. All code must be contained within a single file
 
-## ✨ Solution
-
-### **solution.js** - The Main Program
-
-```javascript
-// JavaScript -> Python -> JavaScript Quine
-const jsCode = `// JavaScript -> Python -> JavaScript Quine
-const jsCode = \\\`{0}\\\`;
-
-const pythonCode = \\\`print("""\${jsCode.replace(/\\\\\\\\\\\\\\\\/g, '\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\').replace(/"/g, '\\\\\\\\"').replace(/\\\\n/g, '\\\\\\\\n')}""")\\\`;
-
 console.log(pythonCode);`;
 
 const pythonCode = `print("""${jsCode.replace(/\\\\/g, '\\\\\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n')}""")`;
